@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>La Ruleta Aleatoria</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+  <div class="container">
+    <!-- Cabecera y navegación -->
+    <header>
+      <nav class="navbar navbar-dark bg-dark" aria-label="breadcrumb">
+        <a class="navbar-brand" href="index.html">
+          <img src="https://cdn-icons-png.flaticon.com/128/8216/8216411.png" alt="Inicio" class="icon-home">
+          <span>Inicio</span>
+        </a>
+        <ul class="nav">
+          <li class="nav-item active"><a class="nav-link" href="index.html">Ruleta</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://es.piliapp.com/random/dice/">Dado</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://es.piliapp.com/random/number/">Números</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://es.piliapp.com/random/coin/">Moneda</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://es.piliapp.com/random/list/">Barajar</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://es.piliapp.com/random/lots/">Echar suertes</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+      <section id="ruleta-section" class="ruleta-section">
+        <h1>La Ruleta Aleatoria</h1>
+        <p>Introduce cada opción en una línea diferente.</p>
+        <textarea id="names" placeholder="Ejemplo:
+Juan
+María
+Diego
+Ana
+Carlos"></textarea>
+        <br>
+        <button id="spin" class="btn btn-primary">Girar</button>
+        
+        <!-- Contenedor de la ruleta y la flecha indicadora -->
+        <div id="wheel-container">
+  		<canvas id="wheel" width="400" height="400"></canvas>
+  		<div id="pointer" class="pointer-right">►</div>
+	</div>
+
+
+        <p id="result"></p>
+      </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+      <p>© 2025 - DACS</p>
+    </footer>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
