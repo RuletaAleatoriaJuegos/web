@@ -43,10 +43,9 @@ Carlos"></textarea>
         
         <!-- Contenedor de la ruleta y la flecha indicadora -->
         <div id="wheel-container">
-  		<canvas id="wheel" width="400" height="400"></canvas>
-  		<div id="pointer" class="pointer-right">►</div>
-	</div>
-
+          <canvas id="wheel" width="400" height="400"></canvas>
+          <div id="pointer" class="pointer-right">►</div>
+        </div>
 
         <p id="result"></p>
       </section>
@@ -57,7 +56,21 @@ Carlos"></textarea>
       <p>© 2025 - DACS</p>
     </footer>
   </div>
-  
+
   <script src="script.js"></script>
+
+  <!-- Protección contra inspección básica -->
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.onkeydown = function(e) {
+      if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) ||
+        (e.ctrlKey && e.key === "U")
+      ) {
+        return false;
+      }
+    };
+  </script>
 </body>
 </html>
